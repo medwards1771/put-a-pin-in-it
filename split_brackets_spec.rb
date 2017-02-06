@@ -2,10 +2,10 @@ require 'rspec'
 require_relative 'split_brackets'
 
 describe SplitBrackets do
-  let(:split_bracket) { SplitBrackets.new(string) }
+  let(:split_bracket) { SplitBrackets.new }
 
   describe "#method" do
-    subject { split_bracket.method }
+    subject { split_bracket.solution(string) }
 
     context "case the first" do
       let(:string) { '(())' }
@@ -25,6 +25,11 @@ describe SplitBrackets do
     context "case the fourth" do
       let(:string) { '(()))' }
       it { is_expected.to eq(3) }
+    end
+
+    context "case the fifth" do
+      let(:string) { '' }
+      it { is_expected.to eq(0) }
     end
   end
 end
