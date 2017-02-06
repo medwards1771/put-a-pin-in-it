@@ -4,7 +4,7 @@ require_relative 'split_brackets'
 describe SplitBrackets do
   let(:split_bracket) { SplitBrackets.new }
 
-  describe "#method" do
+  describe "#solution" do
     subject { split_bracket.solution(string) }
 
     context "case the first" do
